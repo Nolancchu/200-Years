@@ -8,13 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.small {line-height: 0.2;}
-.br { display: block; margin-bottom: -.4em; } 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-bar,h1,button {font-family: "Playfair Display", serif}
-.fa-github {font-size:50px}
-</style>
+
 </head>
 <body>
 
