@@ -8,19 +8,16 @@
 
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-80 w3-container">
-    <div class="w3-content">
-        <div class="w3-center w3-padding-32">
-            <h1 class="w3-text-white w3-jumbo">200 Years: An Analysis of <span class="br"></span>  Team Mean Champion Age</h1>
-            <p class="w3-text-white small w3-xlarge">DSC 80 Final Project: Nolan Chu & Desmond Vu</p>
-            <h1>Introduction</h1>
-            <h5 class="w3-padding-16 w3-left-align">League of Legends, colloquially know as LoL or Leauge, is a popular multiplayer online battle arena video game developed and published by Riot Games. It was released in 2009 and has since become one of the most widely played and watched esports games in the world.</h5>
-            <h5 class="w3-padding-16 w3-left-align">Our dataset is on professional League of Legends games in 2022 and contains 12 rows per recorded game, 2 for the summary statistics of each team, and 1 for each player on each team (10 players in total). Each row contains key statistics about the team or the player and gives insight into the game state and overall results. Our goal is to explore the dataset to find meaningful information for anyone who plays and cares about the game.</h5>
-            <h5 class="w3-padding-16 w3-left-align">League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to devle into the validity of that claim with the following question: <b><em>Does the time since your champion's release date have any effect on one's likelihood to win a game?</em></b> Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</h5>
-            <h1>The Dataset</h1>
-            <h5 class="w3-padding-16 w3-left-align">Our dataset from Oracle's Elixir contains gameplay statistics and records on each match. The dataset contains 148992 rows, and 131 total columns, the most important to our research being gameid, result, date, champion, and position.</h5>
-            <ul class="w3-padding-16 w3-left-align">
-                <li>
+<h1 class="w3-text-white w3-jumbo">200 Years: An Analysis of <span class="br"></span>  Team Mean Champion Age</h1>
+<p class="w3-text-white small w3-xlarge">DSC 80 Final Project: Nolan Chu & Desmond Vu</p>
+<h1>Introduction</h1>
+<h5 class="w3-padding-16 w3-left-align">League of Legends, colloquially know as LoL or Leauge, is a popular multiplayer online battle arena video game developed and published by Riot Games. It was released in 2009 and has since become one of the most widely played and watched esports games in the world.</h5>
+<h5 class="w3-padding-16 w3-left-align">Our dataset is on professional League of Legends games in 2022 and contains 12 rows per recorded game, 2 for the summary statistics of each team, and 1 for each player on each team (10 players in total). Each row contains key statistics about the team or the player and gives insight into the game state and overall results. Our goal is to explore the dataset to find meaningful information for anyone who plays and cares about the game.</h5>
+<h5 class="w3-padding-16 w3-left-align">League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to devle into the validity of that claim with the following question: <b><em>Does the time since your champion's release date have any effect on one's likelihood to win a game?</em></b> Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</h5>
+<h1>The Dataset</h1>
+<h5 class="w3-padding-16 w3-left-align">Our dataset from Oracle's Elixir contains gameplay statistics and records on each match. The dataset contains 148992 rows, and 131 total columns, the most important to our research being gameid, result, date, champion, and position.</h5>
+<ul class="w3-padding-16 w3-left-align">
+<li>
                     <h5><i>gameid:</i> This column contains a unique identifier for each match, allowing to identify unique games within the dataset.</h5>
                     <br>
                 </li>
