@@ -3,4 +3,4 @@ plugins:
 - jekyll-remote-theme
 
 minima:
-  skin: solarized-dark
+  skin: dark
