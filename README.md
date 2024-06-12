@@ -1,21 +1,14 @@
-<body>
-
-
 <!-- Header -->
 
 
 <!-- First Grid -->
-<h1>200 Years: An Analysis of <span class="br"></span>  Team Mean Champion Age</h1>
-
-<p>DSC 80 Final Project: Nolan Chu & Desmond Vu</p>
-
 <h1>Introduction</h1>
 
 <h5>League of Legends, colloquially know as LoL or Leauge, is a popular multiplayer online battle arena video game developed and published by Riot Games. It was released in 2009 and has since become one of the most widely played and watched esports games in the world.</h5>
 
 <h5>Our dataset is on professional League of Legends games in 2022 and contains 12 rows per recorded game, 2 for the summary statistics of each team, and 1 for each player on each team (10 players in total). Each row contains key statistics about the team or the player and gives insight into the game state and overall results. Our goal is to explore the dataset to find meaningful information for anyone who plays and cares about the game.</h5>
 
-<h5>League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to devle into the validity of that claim with the following question: <b><em>Does the time since your champion's release date have any effect on one's likelihood to win a game?</em></b> Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</h5>
+<h5>League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to devle into the validity of that claim with the following question: <em>**Does the time since your champion's release date have any effect on one's likelihood to win a game?</em>** Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</h5>
 
 <h1>The Dataset</h1>
 
