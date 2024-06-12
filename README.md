@@ -7,17 +7,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 <body>
 
 
 <!-- Header -->
-<header class="w3-container w3-left" style="background-color:rgba(255,5,43,255); padding:70px 16px">
-    <h1 class="w3-text-white w3-jumbo">200 Years: An Analysis of <span class="br"></span>  Team Mean Champion Age</h1>
-    <p class="w3-text-white small w3-xlarge">DSC 80 Final Project: Nolan Chu & Desmond Vu</p>
-    <a href="https://github.com/Nolancchu/DSC-80-Final-Project" class="fa fa-github w3-circle w3-black w3-hover-white w3-padding-large w3-xxlarge w3-margin-top" ></a>
-</header>
+<h1 class="w3-text-white w3-jumbo">200 Years: An Analysis of <span class="br"></span>  Team Mean Champion Age</h1>
+<p class="w3-text-white small w3-xlarge">DSC 80 Final Project: Nolan Chu & Desmond Vu</p>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-80 w3-container">
