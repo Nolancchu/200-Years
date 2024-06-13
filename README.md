@@ -126,4 +126,14 @@
 
 <p>For this test, our resulting p-test was 0.00, meaning that champion age definitely has SOME effect on winrate, though from this test alone, we can determine any more.</p>
 
-<h1>Farming a Prediction Problem</h1>
+<h1>Framing a Prediction Problem</h1>
+<h4>Our problem: predicting the outcome of a match using champion age and role.</h4>
+<p>To answer our problem, we're going to use a binary classifier on results, with the two classes being 1 representing a win, and 0 representing a loss. We chose this column because it's the most intutitve to work with and fits well with the theme and question of this project.</p>
+<h4>Our metric: accuracy</h4>
+<p>Because there are roughly the same amount of wins and losses in the results column, we're going to use accuracy in order to judge the quality of our models.</p>
+
+<h1>Baseline Model</h1>
+
+<p>For our base model, we wanted to keep it simple and see if we could predict the result of a match based on a team's champion ages, position, and kills, in total, 3 features. We changed champion ages from time deltas into ints, we one hot encoded position, and we left kills as is. All in all, there are two quantative features and one ordinal feature.</p>
+
+<p>For both our training and test sets, our base model achieved an accuracy of roughly 68%, which while not necessarily bad, and certainly higher than if guessing by chance, can be improved greatly, which we do in our following model.</p>
