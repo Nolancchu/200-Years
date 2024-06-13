@@ -53,6 +53,15 @@
 
 <p>Additionally, not all columns in the original dataset are needed, so we filtered the dataset to only contain our prior columns and the following: 'gameid', 'result', 'date', 'release date', 'champion age','champion', and 'position'. Shown below are the first few rows of our cleaned dataset.</p>
 
+<h3>Univariate Analysis</h3>
+
+<iframe
+  src="killsfig.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
         
 
