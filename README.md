@@ -54,6 +54,7 @@
 <p>Additionally, not all columns in the original dataset are needed, so we filtered the dataset to only contain our prior columns and the following: 'gameid', 'result', 'date', 'release date', 'champion age','champion', and 'position'. Shown below are the first few rows of our cleaned dataset.</p>
 
 <h3>Univariate Analysis</h3>
+<p>We performed univariate analysis on the kills column, the graph below shows the frequency of each amount of kills</p>
 
 <iframe
   src="killsfig.html"
@@ -62,6 +63,8 @@
   frameborder="0"
 ></iframe>
 
-<p>This graph shows how many wins are in the dataset at each kill count for each player</p>
+<h3>Bivariate Analysis</h3>
+<p>We performed bivariate analysis on the champion and result column, except we transformed the results into winrate percentages for each champion.</p>
+
 
 
