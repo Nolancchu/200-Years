@@ -25,7 +25,7 @@
     <p><em>date:</em> This column contains a timestamp with the year, month, day, hour, minute and second the match started. For the purposes or our research, we shortened it to only year, month, and day.</p>
   </li>
   <li>
-    <p><em>champion:</em> This column contains strings with the name of the champion played. This column contains a string if the row is a player row, and null if the row is a team row.</p>
+    <p><em>champion:</em> In League of Legends, each player selects a character to play, called a champion. This column contains strings with the name of the champion played. This column contains a string if the row is a player row, and null if the row is a team row.</p>
   </li>
   <li>
     <p><em>position:</em> This column contains strings representing the position played by a player. It can be any of the following: "top", "jng", "mid", "bot", or "sup". This column contains one of the prior strings if the row is a player row, and null if the row is a team row.</p>
@@ -44,6 +44,16 @@
 </ul>
       
 <h1>Data Cleaning and Exploratory Data Analysis</h1>
+
+<h3>Cleaning</h3>
+
+<p>For our purposes, we needed to add to our dataset the date that each champion was released to the public. Additionally, we needed to update these dates for reworks or large gameplay updates released by Riot. Periodically, Riot makes substantial changes to certain champions, changing their gameplay and viability. Therefore, in order to reflect this in our dataset, we accounted for reworks/updates when scraping from the League of Legends wiki when creating our 'release date' column. </p>
+
+<p>To create our 'champion age' column we created a pandas time delta between the date of the match and the date of the champion's release or latest major update.</p>
+
+<p>Additionally, not all columns in the original dataset are needed, so we filtered the dataset to only contain our prior columns and the following: 'gameid', 'result', 'date', 'release date', 'champion age','champion', and 'position'. Shown below are the first few rows of our cleaned dataset.</p>
+
+
         
 
 
