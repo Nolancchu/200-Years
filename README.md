@@ -10,7 +10,7 @@
 
 <p>League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to devle into the validity of that claim with the following question: <em>Does the time since your champion's release date have any effect on one's likelihood to win a game?</em> Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</p>
 
-<h1>The Dataset</h1>
+<h3>The Dataset</h3>
 
 <p>Our dataset from Oracle's Elixir contains gameplay statistics and records on each match. The dataset contains 148992 rows, and 131 total columns, the most important to our research being gameid, result, date, champion, and position.</p>
 
