@@ -53,6 +53,15 @@
 
 <p>Additionally, not all columns in the original dataset are needed, so we filtered the dataset to only contain our prior columns and the following: 'gameid', 'result', 'date', 'release date', 'champion age','champion', and 'position'. Shown below are the first few rows of our cleaned dataset.</p>
 
+| gameid                | result | date       | release date | champion age | champion | position |
+|-----------------------|--------|------------|--------------|--------------|----------|----------|
+| ESPORTSTMNT01_2690210 | 0      | 2022-01-10 | 2011-01-18   | 4010 days    | Renekton | top      |
+| ESPORTSTMNT01_2690210 | 0      | 2022-01-10 | 2017-09-26   | 1567 days    | Xin Zhao | jng      |
+| ESPORTSTMNT01_2690210 | 0      | 2022-01-10 | 2016-11-10   | 1887 days    | LeBlanc  | mid      |
+| ESPORTSTMNT01_2690210 | 0      | 2022-01-10 | 2020-09-21   | 476 days     | Samira   | bot      |
+| ESPORTSTMNT01_2690210 | 0      | 2022-01-10 | 2011-07-13   | 3834 days    | Leona    | sup      |
+
+
 <h3>Univariate Analysis</h3>
 <p>We performed univariate analysis on the kills column, the graph below shows the frequency of each amount of kills</p>
 
@@ -84,3 +93,19 @@
 | sup      | 35.421472  |
 | top      | 247.535760 |
 
+<h1>Assessment of Missingness</h1>
+
+<h3>NMAR Analysis</h3>
+<p>We believe there to be a column in our original dataset that is NMAR, that being the url column. Some entries in the url column are missing, likely due to there not being a recording of that particular game. To further explain this point, we would need to prove whether or not a recording exists of each game.</p>
+
+<h3>Missingness Dependency</h3>
+<p>Another question we wanted to explore surronding missingness is the missingness of the 'baron' column. In game, the baron is an objectiive that a team can take that does not spawn until 20 minutes, so we wanted to run a permutation test with 'barons' and 'deaths'. Can you predict, at least to some degree, whether the barons entry will be missing or not looking at the amount of deaths recorded.</p>
+
+<p>The answer is yes, the mean deaths when barons is null is 2.8 while the mean deaths when barons is non-null is 5.2, giving us a p-value of 0 for our permutation test. Below we've graphed out the average deaths for null and non-null barons entries.</p>
+
+<iframe
+  src="deathfig"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
