@@ -66,5 +66,21 @@
 <h3>Bivariate Analysis</h3>
 <p>We performed bivariate analysis on the champion and result column, except we transformed the results into winrate percentages for each champion.</p>
 
+<iframe
+  src="wrfig"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
+<h3>Aggregates</h3>
+<p>Below we've aggregated the mean number of minion kills (called creep score or cs) per position in a game.</p>
+
+| position |  total cs  |
+|----------|------------|
+| bot      | 278.649565 |
+| jng      | 173.146585 |
+| mid      | 260.918371 |
+| sup      | 35.421472  |
+| top      | 247.535760 |
 
