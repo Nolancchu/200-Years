@@ -112,16 +112,10 @@
 
 <h1>Hypothesis Testing</h1>
 <ul>
-  <li>
-    Null hypothesis: time since a champion's release has NO bearing on their team's winrate
-  </li>
-    Alternate hypothesis: time since a champion's release affects likelihood that their team will win.
-  <li>
-    Test statistic: abs(winning team mean champion age - losing team mean champion age)
-  </li>
-  <li>
-    Confidence Level: 95%
-  </li>
+  <li>Null hypothesis: time since a champion's release has NO bearing on their team's winrate</li>
+  <li>Alternate hypothesis: time since a champion's release affects likelihood that their team will win.</li>
+  <li>Test statistic: abs(winning team mean champion age - losing team mean champion age)</li>
+  <li>Confidence Level: 95%</li>
 </ul>
 
 <p>For this test, our resulting p-test was 0.00, meaning that champion age definitely has SOME effect on winrate, though from this test alone, we can determine any more.</p>
@@ -134,6 +128,25 @@
 
 <h1>Baseline Model</h1>
 
-<p>For our base model, we wanted to keep it simple and see if we could predict the result of a match based on a team's champion ages, position, and kills, in total, 3 features. We changed champion ages from time deltas into ints, we one hot encoded position, and we left kills as is. All in all, there are two quantative features and one ordinal feature.</p>
+<p>For our base model, we wanted to keep it simple and see if we could predict the result of a match based on a team's champion ages, position, and kills, in total, 3 features. We changed champion ages from time deltas into ints, we one hot encoded position, and we left kills as is. All in all, there are two quantative features and one ordinal feature. Our model utilized a tree classifier.</p>
 
 <p>For both our training and test sets, our base model achieved an accuracy of roughly 68%, which while not necessarily bad, and certainly higher than if guessing by chance, can be improved greatly, which we do in our following model.</p>
+
+<h1>Final Model</h1>
+
+<p>To our final model, we added the following features:</p>
+<ul>
+  <li>kills: kills are a good way to gauge someone's performance in a game.</li>
+  <li>deaths: deaths, or a lack of, are a good way to gauge someone's performance in a game.</li>
+  <li>assists: like kills and deaths, assists are a good way to gauge someone's performance in a game.</li>
+  <li>gamelength: this feature was added to standardize kills, death, and assists as a longer game time allows players more time to fight in a match. A by group standardizer was used to standardize kills, deaths and assists based on game time.</li>
+  <li>champion age: though it was in the previous model, in the final model it is now standardized.</li>
+  <li>side: In the League of Legends map, the two sides that team's play on are not exactly the same. We wanted to account for this in our final model, so we one hot enocded side as a feature.</li>
+</ul>
+
+<p>Our algorithim for our final model is a random forest classifier, with the following hyperparameters:</p>
+<ul>
+  <li>n_estimators = 100</li>
+  <li>max_depth = 13</li>
+  <li>criterion = entropy</li>
+</ul>
