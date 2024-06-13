@@ -62,7 +62,6 @@
   frameborder="0"
 ></iframe>
 
-
-        
+<p>This graph shows how many wins are in the dataset at each kill count for each player</p>
 
 
