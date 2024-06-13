@@ -109,3 +109,14 @@
   height="600"
   frameborder="0"
 ></iframe>
+
+<h1>Hypothesis Testing</h1>
+<ul>
+  <li>
+    Null hypothesis: time since a champion's release has NO bearing on their team's winrate
+  </li>
+    Alternate hypothesis: time since a champion's release affects likelihood that their team will win.
+  <li>
+    Test statistic: abs(winning team mean champion age - losing team mean champion age)
+  </li>
+</ul>
