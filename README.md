@@ -4,11 +4,11 @@
 <!-- First Grid -->
 <h1>Introduction</h1>
 
-<p>League of Legends, colloquially know as LoL or Leauge, is a popular multiplayer online battle arena video game developed and published by Riot Games. It was released in 2009 and has since become one of the most widely played and watched esports games in the world.</p>
+<p>League of Legends, colloquially known as LoL or League, is a popular multiplayer online battle arena video game developed and published by Riot Games. It was released in 2009 and has since become one of the most widely played and watched esports games in the world.</p>
 
 <p>Our dataset is on professional League of Legends games in 2022 and contains 12 rows per recorded game, 2 for the summary statistics of each team, and 1 for each player on each team (10 players in total). Each row contains key statistics about the team or the player and gives insight into the game state and overall results. Our goal is to explore the dataset to find meaningful information for anyone who plays and cares about the game.</p>
 
-<p>League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to devle into the validity of that claim with the following question: <em>Does the time since your champion's release date have any effect on one's likelihood to win a game?</em> Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</p>
+<p>League of legends players frequently joke/complain about how recently released champions are unbalanced, so we want to delve into the validity of that claim with the following question: <em>Does the time since your champion's release date have any effect on one's likelihood to win a game?</em> Is it possible to predict which team will win a game by their team's mean champion age, and can I use our findings to make excuses for when I lose in solo queue?</p>
 
 <h3>The Dataset</h3>
 
@@ -99,7 +99,7 @@
 <p>We believe there to be a column in our original dataset that is NMAR, that being the url column. Some entries in the url column are missing, likely due to there not being a recording of that particular game. To further explain this point, we would need to prove whether or not a recording exists of each game.</p>
 
 <h3>Missingness Dependency</h3>
-<p>Another question we wanted to explore surronding missingness is the missingness of the 'baron' column. In game, the baron is an objectiive that a team can take that does not spawn until 20 minutes, so we wanted to run a permutation test with 'barons' and 'deaths'. Can you predict, at least to some degree, whether the barons entry will be missing or not looking at the amount of deaths recorded.</p>
+<p>Another question we wanted to explore surrounding missingness is the missingness of the 'baron' column. In game, the baron is an objective that a team can take that does not spawn until 20 minutes, so we wanted to run a permutation test with 'barons' and 'deaths'. Can you predict, at least to some degree, whether the barons entry will be missing or not looking at the amount of deaths recorded.</p>
 
 <p>The answer is yes, the mean deaths when barons is null is 2.8 while the mean deaths when barons is non-null is 5.2, giving us a p-value of 0 for our permutation test. Below we've graphed out the average deaths for null and non-null barons entries.</p>
 
@@ -122,13 +122,13 @@
 
 <h1>Framing a Prediction Problem</h1>
 <h4>Our problem: predicting the outcome of a match using champion age and role.</h4>
-<p>To answer our problem, we're going to use a binary classifier on results, with the two classes being 1 representing a win, and 0 representing a loss. We chose this column because it's the most intutitve to work with and fits well with the theme and question of this project.</p>
+<p>To answer our problem, we're going to use a binary classifier on results, with the two classes being 1 representing a win, and 0 representing a loss. We chose this column because it's the most intuitive to work with and fits well with the theme and question of this project.</p>
 <h4>Our metric: accuracy</h4>
 <p>Because there are roughly the same amount of wins and losses in the results column, we're going to use accuracy in order to judge the quality of our models.</p>
 
 <h1>Baseline Model</h1>
 
-<p>For our base model, we wanted to keep it simple and see if we could predict the result of a match based on a team's champion ages, position, and kills, in total, 3 features. We changed champion ages from time deltas into ints, we one hot encoded position, and we left kills as is. All in all, there are two quantative features and one ordinal feature. Our model utilized a tree classifier.</p>
+<p>For our base model, we wanted to keep it simple and see if we could predict the result of a match based on a team's champion ages, position, and kills, in total, 3 features. We changed champion ages from time deltas into ints, we one hot encoded position, and we left kills as is. All in all, there are two quantitative features and one ordinal feature. Our model utilized a tree classifier.</p>
 
 <p>For both our training and test sets, our base model achieved an accuracy of roughly 68%, which while not necessarily bad, and certainly higher than if guessing by chance, can be improved greatly, which we do in our following model.</p>
 
@@ -141,10 +141,10 @@
   <li>assists: like kills and deaths, assists are a good way to gauge someone's performance in a game.</li>
   <li>gamelength: this feature was added to standardize kills, death, and assists as a longer game time allows players more time to fight in a match. A by group standardizer was used to standardize kills, deaths and assists based on game time.</li>
   <li>champion age: though it was in the previous model, in the final model it is now standardized.</li>
-  <li>side: In the League of Legends map, the two sides that team's play on are not exactly the same. We wanted to account for this in our final model, so we one hot enocded side as a feature.</li>
+  <li>side: In the League of Legends map, the two sides that team's play on are not exactly the same. We wanted to account for this in our final model, so we one hot encoded side as a feature.</li>
 </ul>
 
-<p>Our algorithim for our final model is a random forest classifier, with the following optimal hyperparameters determined by doing a grid search on the model:</p>
+<p>Our algorithm for our final model is a random forest classifier, with the following optimal hyperparameters determined by doing a grid search on the model:</p>
 <ul>
   <li>n_estimators = 100</li>
   <li>max_depth = 13</li>
