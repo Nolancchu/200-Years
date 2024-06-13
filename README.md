@@ -119,4 +119,11 @@
   <li>
     Test statistic: abs(winning team mean champion age - losing team mean champion age)
   </li>
+  <li>
+    Confidence Level: 95%
+  </li>
 </ul>
+
+<p>For this test, our resulting p-test was 0.00, meaning that champion age definitely has SOME effect on winrate, though from this test alone, we can determine any more.</p>
+
+<h1>Farming a Prediction Problem</h1>
