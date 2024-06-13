@@ -144,9 +144,14 @@
   <li>side: In the League of Legends map, the two sides that team's play on are not exactly the same. We wanted to account for this in our final model, so we one hot enocded side as a feature.</li>
 </ul>
 
-<p>Our algorithim for our final model is a random forest classifier, with the following hyperparameters:</p>
+<p>Our algorithim for our final model is a random forest classifier, with the following optimal hyperparameters determined by doing a grid search on the model:</p>
 <ul>
   <li>n_estimators = 100</li>
   <li>max_depth = 13</li>
   <li>criterion = entropy</li>
 </ul>
+
+<p>Our accuracy for our final model is vastly better than our base model, having a training set accuracy of roughly 91% and a test set accuracy of roughly 88%. Overall, our final model is leaps and bounds ahead of our base model.</p>
+
+<h1>Fairness Analysis</h1>
+<p>To analyze the fairness of our model, we created two groups, rows with a champion age above 365 days, and rows with champion ages below or including 365 days. The evaluation metric was accuracy and the test statistic we decided on was the accuracy of the model for only older champions - the accuracy of the model for only newer champions. Our significance level was 95% and we got a p-value of 1, meaning we fail to reject the null hypothesis that says there is no difference between the models accuracy when it comes to champions older than a year and those younger.</p>
